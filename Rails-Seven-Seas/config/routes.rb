@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/welcome' => 'seas#welcome'
   post '/seas' => 'seas#index'
 
+  #ignore this comment
+
 end
