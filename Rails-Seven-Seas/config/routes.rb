@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/seas/new' => 'seas#new'
   get '/seas/:id' => 'seas#show'
   get '/welcome' => 'seas#welcome'
+  post '/seas' => 'seas#index'
 
 end

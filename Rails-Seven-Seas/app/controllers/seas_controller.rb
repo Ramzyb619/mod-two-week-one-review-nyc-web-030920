@@ -18,7 +18,7 @@ class SeasController < ApplicationController
     # @sea = Sea.new(sea_params)
     # @sea = Sea.create
     # render 'new.html'
-
+    @sea = Sea.new
   end
 
   def show
