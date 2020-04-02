@@ -1,5 +1,9 @@
 class SeasController < ApplicationController
   #define your controller actions here
+  
+  def welcome
+    render :welcome
+  end
 
   def index
     @seas = Sea.all
@@ -25,8 +29,16 @@ class SeasController < ApplicationController
     @sea = Sea.find(params[:id])
   end
 
-  def welcome
+  def update
+    @sea = Sea.find(params[:id])
+    @sea.update(sea_params)
+    redirect_to "/seas/#{@sea.id}"
+  end
 
+  def destroy
+    @sea = Sea.destroy(params[:id])
+    redirect_to "/seas"
+    # @sea.delete
   end
 
 
